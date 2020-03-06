@@ -19,6 +19,7 @@
 body {
   font-family: 'Libre Franklin', sans-serif;
   background: #fff;
+  
 }
 
 ul,
@@ -36,7 +37,9 @@ li {
 
 .logo {
   margin-top: 1rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.1rem;
+  margin-right: 10rem;
+  
 }
 
 .heading {
@@ -153,6 +156,7 @@ li {
 .attribution {
   font-size: 11px;
   text-align: center;
+  padding: 0.5rem 0;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
@@ -161,7 +165,7 @@ li {
 /* footer styling */
 footer .social {
   text-align: center;
-  padding: 1.5rem;
+  padding: 0.5rem;
 }
 
 footer .social i {
@@ -212,6 +216,21 @@ footer small {
 }
 .thanks a:hover {
   background-color: #774799;
+}
+
+@media(max-width: 500px){
+  .count-wrapper .flex-item {
+    display: none;
+  }
+  .count-wrapper .flex-item:first-child {
+    display: block;
+    flex: 1 1 80%;
+  }
+
+  .flex-item div {
+    font-size: 5rem;
+    padding: 2rem;
+  }
 }
 
 /* Normal screen */
