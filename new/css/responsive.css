@@ -1,0 +1,11 @@
+@media only screen and (max-width: 600px) {
+    .elesarr {
+      /* background-color: green; */
+      /* margin-top: ; */
+      height: 80px;
+      position: relative !important;
+      left: 90px !important;
+      right: 0px;
+      display: inline-block !important;
+    }
+  }
