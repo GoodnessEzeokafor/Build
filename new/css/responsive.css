@@ -12,3 +12,44 @@
       display: none;
     }
   }
+
+
+
+
+
+  @media only screen and (min-width: 700px) {
+    .elesarr {
+      /* background-color: green; */
+      /* margin-top: ; */
+      height: 120px;
+      position: relative !important;
+      left: 400px !important;
+      right: 0px;
+      padding-top: 0px;
+      margin-top: 0px;
+      display: inline-block !important;
+    }
+    /* #accordionSidebar{
+      display: none;
+    } */
+  }
+
+
+
+  @media only screen and (min-width: 900px) {
+    .elesarr {
+      /* background-color: green; */
+      /* margin-top: ; */
+      height: 120px;
+      position: relative !important;
+      left: 100px !important;
+      right: 0px;
+      padding-top: 0px;
+      margin-top: 0px;
+      display: inline-block !important;
+    }
+    /* #accordionSidebar{
+      display: none;
+    } */
+    
+  }
