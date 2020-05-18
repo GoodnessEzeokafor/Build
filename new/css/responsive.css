@@ -2,11 +2,16 @@
     .elesarr {
       /* background-color: green; */
       /* margin-top: ; */
-      height: 130px;
+      /* height: 130px; */
       position: relative !important;
-      left: 90px !important;
+      left: 110px !important;
       right: 0px;
-      display: inline-block !important;
+      margin-top:0px
+
+      /* display: inline-block !important; */
+    }
+    .navbar-brand{
+      margin-top:0px
     }
     #accordionSidebar{
       display: none;
