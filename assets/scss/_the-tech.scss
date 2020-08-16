@@ -1,0 +1,147 @@
+
+
+
+/*===========================
+    20.THE TECH css 
+===========================*/
+
+
+
+
+.the-tech-area{
+	position: relative;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	background: #f7f7f9;
+	&::before{
+		position: absolute;
+		content: '';
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 595px;
+		background-image: url(../images/shape/shape-line-1.jpg);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	& .the-tech-title{
+		background-image: url(../images/the-tech-thumb.jpg);
+		background-size: 100% 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		height: 520px;
+		padding: 134px 72px 0;
+		position: relative;
+		z-index: 5;
+		@media #{$lg} {
+			padding: 134px 30px 0;
+		}
+		@media #{$md} {
+			padding: 134px 72px 100px;
+			height: auto;
+		}
+		@media #{$xs} {
+			padding: 134px 45px 100px;
+			height: auto;
+		}
+		@media #{$sm} {
+			padding: 134px 72px 100px;
+			height: auto;
+		}
+		&::before{
+			position: absolute;
+			content: '';
+			left: 0;
+			top: 0;
+			height: 100%;
+			width: 100%;
+			background-color: rgba(41, 240, 180,.9);
+			z-index: -2;
+
+		}
+		&::after{
+			position: absolute;
+			content: '';
+			left: 0;
+			top: 0;
+			height: 54px;
+			width: 54px;
+			background: #1b1f2e;
+			z-index: -1;
+		}
+		& .title{
+			font-size: 50px;
+			@media #{$xs} {
+				font-size: 32px;
+			}
+			@media #{$sm} {
+				font-size: 50px;
+			}
+		}
+	}
+	& .the-tech-box{
+		position: relative;
+		&::before{
+			position: absolute;
+			content: '';
+			right: 0;
+			top: 0;
+			height: 18px;
+			width: 18px;
+			background: $theme-color;
+			z-index: 9;
+		}
+		& .tech-logo{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			height: 80px;
+			width: 80px;
+			text-align: center;
+			line-height: 80px;
+			border-radius: 50%;
+			background: #f7f7f9;
+			z-index: 5;
+			@media #{$xs} {
+				display: none;
+			}
+		}
+		& .the-tech-item{
+			background: $white;
+			padding: 54px 60px 55px;
+			border: 1px solid #f7f7f9;
+			@include transition(0.3s);
+			position: relative;
+			z-index: 1;
+			@media #{$lg} {
+				padding: 54px 30px 55px;
+			}
+			@media #{$md} {
+				padding: 54px 30px 55px;
+			}
+			@media #{$xs} {
+				padding: 54px 20px 55px;
+			}
+			& .title{
+				font-size: 24px;
+				@include transition(0.3s);
+				&:hover{
+					color: $theme-color-2;
+				}
+			}
+			& p{
+				color: #838694;
+				line-height: 30px;
+				padding-top: 30px;
+			}
+			&:hover{
+				box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.05);
+				z-index: 2;
+			}
+		}
+	}
+}
+
+

@@ -1,0 +1,445 @@
+
+
+
+/*===========================
+    17.FAQ css 
+===========================*/
+
+
+
+
+
+
+.faq-area{
+	padding-top: 290px;
+	padding-bottom: 120px;
+	margin-top: -178px;
+	& .faq-content{
+		& > span{
+			font-size: 18px;
+			color: #d1c8fe;
+			padding-left: 15px;
+			position: relative;
+			&::before{
+				position: absolute;
+				content: '';
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				height: 6px;
+				width: 6px;
+				background: $theme-color;
+			}
+		}
+		& .title{
+			font-size: 60px;
+			color: $white;
+			padding-top: 5px;
+			padding-bottom: 37px;
+            @media #{$lg} {
+                font-size: 50px;
+            }
+            @media #{$xs} {
+                font-size: 30px;
+            }
+            @media #{$sm} {
+                font-size: 40px;
+            }
+		}
+		& p{
+			font-size: 18px;
+			line-height: 34px;
+			color: #d1c8fe;
+			padding-right: 70px;
+			padding-bottom: 48px;
+            @media #{$lg} {
+                padding-right: 0;
+            }
+            @media #{$xs} {
+                padding-right: 0;
+                font-size: 16px;
+            }
+		}
+
+		& .categories-box-item{
+			margin-right: 80px;
+			display: flex;
+            @media #{$md} {
+                margin-right: 0;
+            }
+			@media #{$xs} {
+				display: block;
+                margin-right: 0;
+			}
+			@media #{$sm} {
+				display: flex;
+			}
+			& .item{
+				width: 33.33333%;
+				padding: 10px 0 23px;
+				background: $white;
+				border: 1px solid $theme-color-2;
+				text-align: center;
+				@include transition(0.3s);
+				position: relative;
+				@media #{$xs} {
+					width: 100%;
+				}
+				@media #{$sm} {
+					width: 33.33333%;
+				}
+				&::before{
+					position: absolute;
+					content: '';
+					top: 0;
+					right: 0;
+					height: 0px;
+					width: 0px;
+					background: $theme-color;
+					@include transition(0.3s);
+				}
+				& a{
+					text-align: center;
+					& i{
+						font-size: 60px;
+						color: $theme-color-2;
+						@include transition(0.3s);
+					}
+					& span{
+						font-size: 18px;
+						font-weight: 500;
+						color: #1b1f2e;
+						padding-top: 3px;
+					}
+				}
+				&:hover{
+					box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.15);
+					z-index: 10;
+					&::before{
+						height: 18px;
+						width: 18px;
+					}
+					& a{
+						& i{
+							transform: scale(1.1);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+.faq-accrodion{
+	margin-top: 6px;
+    @media #{$md} {
+        margin-top: 30px;
+    }
+    @media #{$xs} {
+        margin-top: 30px;
+    }
+
+    & .accrodion{
+        position: relative;
+        -webkit-transition: all .4s ease;
+        transition: all .4s ease;
+        background-color: rgba(27, 31, 46, 0.102);
+
+        &+.accrodion{
+            margin-top: 10px;
+        }
+        &.active{
+            & .accrodion-inner{
+                background-color: transparent;
+                border-color: #dce0e8;
+                border: 1px solid #765ff2;
+            }
+            &::before{
+                -webkit-transform: scaleX(1);
+                transform: scaleX(1);
+
+            }
+            & .accrodion-title{
+                padding-bottom: 0;
+                &::before{
+                    opacity: 0;
+                }
+                &::after{
+                    opacity: 1;
+                    color: $theme-color;
+                }
+            }
+        }
+        & .accrodion-inner{
+            background-color: transparent;
+            padding: 25px 0;
+            position: relative;
+            -webkit-transition: all .4s ease;
+            transition: all .4s ease;
+            border-radius: 0px;
+
+        }
+        & .accrodion-title{
+            padding: 0px 38px;
+            cursor: pointer;
+            position: relative;
+            -webkit-transition: all .4s ease;
+            transition: all .4s ease;
+            @media #{$xs} {
+                padding: 0 38px 0 20px;
+            }
+            &::before{
+                content: "\f10f";
+                font-family: Flaticon;
+                font-size: 14px;
+                color: $white;
+                position: absolute;
+                top: 50%;
+                right: 30px;
+                -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+                opacity: 1;
+                -webkit-transition: all 500ms ease;
+                transition: all 500ms ease;
+                @media #{$xs} {
+                    right: 20px;
+                }
+            }
+            &::after{
+                content: "\f110";
+                font-family: Flaticon;
+                font-size: 14px;
+                color: $white;
+                position: absolute;
+                top: 50%;
+                right: 30px;
+                -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+                opacity: 0;
+                -webkit-transition: all 500ms ease;
+                transition: all 500ms ease;
+                @media #{$xs} {
+                    right: 20px;
+                }
+
+            }
+            & h4{
+                margin: 0;
+                color: $white;
+                font-family: $roboto;
+                font-size: 18px;
+                font-weight: 500;
+                & span{
+                	color: $theme-color;
+                	font-family: $abril;
+                }
+
+            }
+        }
+        & .accrodion-content{
+            & .inner{
+                padding: 0 38px;
+                padding-right: 50px;
+                padding-top: 29px;
+                padding-bottom: 0px;
+                @media #{$lg} {
+                    padding: 15px 38px 0 40px;
+                }
+                @media #{$xs} {
+                    padding: 0 38px 0 20px;
+                }
+            }
+            & p{
+                margin: 0;
+                color: #d1c8fe;
+                font-size: 16px;
+                line-height: 30px;
+                font-weight: 400;
+
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.faq-title-area{
+    & .section-title{
+        background: #f7f7f9;
+        padding-top: 112px;
+        padding-bottom: 120px;
+        & .input-box{
+            margin-top: 62px;
+            position: relative;
+            @media #{$md} {
+                margin: 62px 20px 0;
+            }
+            @media #{$xs} {
+                margin: 62px 10px 0;
+            }
+            @media #{$sm} {
+                margin: 62px 20px 0;
+            }
+            & button{
+                position: absolute;
+                right: 40px;
+                top: 50%;
+                transform: translateY(-50%);
+                border: 0;
+                background-color: transparent;
+                color: $theme-color-2;
+            }
+            & input{
+                width: 100%;
+                background: $white;
+                border: 0;
+                padding-left: 40px;
+                line-height: 85px;
+                box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.03);
+                font-size: 18px;
+                color: #838694;
+                @media #{$md} {
+                    width: 100%;
+                }
+                @media #{$xs} {
+                    width: 100%;
+                    padding-left: 15px;
+                }
+                @media #{$sm} {
+                    width: 100%;
+                    padding-left: 30px;
+                }
+                &::placeholder{
+                    opacity: 1;
+                    color: #838694;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+.faq-design-area{
+    margin-top: 60px;
+    & .faq-tab-btn{
+        & .nav{
+            @media #{$md} {
+                justify-content: center !important;
+            }
+            @media #{$xs} {
+                justify-content: center !important;
+            }
+            & li{
+                & a{
+                    padding: 0;
+                    margin: 0;
+                    height: 165px;
+                    width: 160px;
+                    background: #f7f7f9;
+                    text-align: center;
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: $heading-color;
+                    display: block;
+                    padding-top: 12px;
+                    border-radius: 0;
+                    @media #{$lg} {
+                        width: 140px;
+                    }
+                    @media #{$md} {
+                        margin: 10px;
+                    }
+                    @media #{$xs} {
+                        margin: 10px;
+                        width: 120px;
+                    }
+                    @media #{$sm} {
+                        margin: 10px;
+                        width: 140px;
+                    }
+                    & i{
+                        display: block;
+                        font-size: 56px;
+                        color: $theme-color-2;
+                        padding-bottom: 8px;
+                    }
+                    &.active{
+                        background: $theme-color;
+                        position: relative;
+                        &::before{
+                            position: absolute;
+                            content: '';
+                            right: 0;
+                            top: 0;
+                            height: 20px;
+                            width: 20px;
+                            background: #1b1f2e;
+                        }
+                        & i{
+                            color: #1b1f2e;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & .tab-content{
+        @media #{$md} {
+            margin-top: 0;
+        }
+        @media #{$xs} {
+            margin-top: 0;
+        }
+        & .tab-pane{
+            & .faq-accrodion {
+                & .accrodion{
+                    background: #f7f7f9;
+                    &.active{
+                        & .accrodion-inner{
+                            background: $theme-color-2;
+                        }
+                        & .accrodion-title{
+                            & h4{
+                                color: $white;
+                            }
+                            &::after{
+                                color: $white;
+                            }
+                        }
+                    }
+                    & .accrodion-title{
+                        & h4{
+                            color: $heading-color;
+                        }
+                        &::before{
+                            color: $theme-color-2;
+                        }
+                    }
+                    & + .accrodion{
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+

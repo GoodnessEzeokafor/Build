@@ -1,0 +1,82 @@
+
+
+
+/*===========================
+    9.BRAND css 
+===========================*/
+
+
+
+
+.brand-area{
+	margin-top: -103px;
+	z-index: 11;
+	position: relative;
+	@media #{$md} {
+		margin-top: 0;
+	}
+	@media #{$xs} {
+		margin-top: 0;
+	}
+	&::before{
+		position: absolute;
+		content: '';
+		right: 0;
+		top: 0;
+		height: 100%;
+		width: 30%;
+		z-index: -1;
+		background: $white;
+		@media #{$md} {
+			display: none;
+		}
+	}
+	& .brand-box{
+		background: $white;
+		& .brand-content{
+			background: $theme-color-2;
+			padding: 70px 70px 70px 80px;
+			position: relative;
+			@media #{$lg} {
+				padding: 70px 30px;
+			}
+			@media #{$md} {
+				margin-bottom: 40px;
+			}
+			@media #{$xs} {
+				margin-bottom: 40px;
+				padding: 34px;
+			}
+			@media #{$sm} {
+				margin-bottom: 40px;
+				padding: 70px 70px 70px 80px;
+			}
+			&::before{
+				position: absolute;
+				content: '';
+				left: 0;
+				top: 0;
+				height: 44px;
+				width: 44px;
+				background: $theme-color;
+			}
+			& .title{
+				font-size: 36px;
+				color: $white;
+			}
+		}
+	}
+	& .brand-item{
+		@media #{$xs} {
+			margin-top: 30px;
+		}
+		& img{
+			opacity: .2;
+			@include transition(0.3s);
+			cursor: pointer;
+			&:hover{
+				opacity: 1;
+			}
+		}
+	}
+}

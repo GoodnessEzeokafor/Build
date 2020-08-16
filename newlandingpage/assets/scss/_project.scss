@@ -1,0 +1,82 @@
+
+
+
+/*===========================
+    23.PROJECT css 
+===========================*/
+
+
+
+
+.project-area{
+	& .project-explore{
+		padding: 70px 80px 80px;
+		position: relative;
+		z-index: 10;
+		@media #{$xs} {
+			padding: 80px 20px 80px;
+		}
+		&::before{
+			position: absolute;
+			content: '';
+			left: 0;
+			top: 0;
+			height: 73px;
+			width: 73px;
+			background: $theme-color;
+		}
+		& .title{
+			font-size: 40px;
+			font-weight: 400;
+			color: $white;
+			@media #{$lg} {
+				font-size: 36px;
+			}
+			@media #{$xs} {
+				font-size: 28px;
+			}
+		}
+		& p{
+			font-size: 18px;
+			line-height: 36px;
+			color: #d1c8fe;
+			padding: 30px 40px 33px;
+			@media #{$lg} {
+				padding: 30px 0 33px;
+			}
+			@media #{$xs} {
+				padding: 30px 0 33px;
+			}
+		}
+		& a{
+			@media #{$xs} {
+				width: 100%;
+				padding: 0;
+			}
+		}
+		&.project-inspired{
+			&::before{
+				left: auto;
+				right: 0;
+				background: $theme-color-2;
+			}
+			& .title{
+				color: $heading-color;
+			}
+			& p{
+				color: $heading-color;
+			}
+			& a{
+				background: $white;
+				color: $heading-color;
+				&::before{
+					background: $heading-color;
+				}
+				&:hover{
+					background: $heading-color;
+					color: $white;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,342 @@
+
+
+
+/*===========================
+    14.FOOTER css 
+===========================*/
+
+
+
+
+.footer-area{
+	background-size: 100% 100%;
+	padding-top: 90px;
+	position: relative;
+	z-index: 10;
+	& .footer-shape{
+		position: absolute;
+		bottom: 85px;
+		right: 150px;
+		z-index: -1;
+		@media #{$laptop} {
+			right: 30px;
+			bottom: 30px;
+		}
+	}
+	& .footer-about{
+		& p{
+			color: #8d91a2;
+			padding-right: 40px;
+			padding-top: 44px;
+			padding-bottom: 36px;
+			@media #{$lg} {
+				padding-right: 0;
+			}
+		}
+		& ul{
+			& li{
+				display: inline-block;
+				& a{
+					height: 47px;
+					width: 47px;
+					text-align: center;
+					line-height: 47px;
+					color: #1b1f2e;
+					background: $theme-color;
+					margin-right: 5px;
+					position: relative;
+					z-index: 5;
+					&::before{
+						position: absolute;
+						content: '';
+						right: 0;
+						top: 0;
+						height: 100%;
+						width: 100%;
+						background: $white;
+						z-index: -1;
+						@include transition(0.3s);
+					}
+					&:hover{
+						&::before{
+							height: 9px;
+							width: 9px;
+						}
+					}
+				}
+			}
+		}
+	}
+	& .footer-list{
+		& .footer-title{
+			padding-top: 7px;
+			& .title{
+				font-size: 20px;
+				font-weight: 400;
+				color: $white;
+				padding-bottom: 39px;
+			}
+			& ul{
+				& li{
+					& a{
+						color: #8d91a2;
+						line-height: 36px;
+						@include transition(0.3s);
+						&:hover{
+							color: $theme-color-2;
+						}
+					}
+				}
+			}
+		}
+	}
+	& .footer-newsletter{
+		margin-left: 40px;
+		@media #{$md} {
+			margin-left: 0;
+		}
+        @media #{$xs} {
+            margin-left: 0;
+        }
+		& .footer-title{
+			padding-top: 7px;
+			& .title{
+				font-size: 20px;
+				font-weight: 400;
+				color: $white;
+				padding-bottom: 49px;
+
+			}
+		}
+		& .input-box{
+			position: relative;
+			& button{
+				position: absolute;
+				right: 6px;
+				top: 50%;
+				transform: translateY(-50%);
+				height: 62px;
+				width: 62px;
+				text-align: center;
+				line-height: 62px;
+				color: $white;
+				background: $theme-color-2;
+				border: 0;
+                @include transition(0.3s);
+                &:hover{
+                    background: $theme-color;
+                }
+			}
+			& input{
+				width: 100%;
+				background-color: transparent;
+				border: 1px solid #323643;
+				padding-left: 30px;
+				line-height: 73px;
+				color: #8d91a2;
+				&::placeholder{
+					opacity: 1;
+					color: #8d91a2;
+				}
+			}
+		}
+		& p{
+			color: #8d91a2;
+			line-height: 32px;
+			padding-top: 18px;
+			@media #{$lg} {
+				font-size: 15px;
+			}
+		}
+	}
+	& .footer-copyright {
+		margin-top: 107px;
+		border-top: 1px solid #2d313e;
+		& p{
+			color: #8d91a2;
+			line-height: 98px;
+		}
+	}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/*===== Go Top =====*/
+
+
+.go-top-area{
+    position: relative;
+    z-index: 999;
+    
+    & .go-top{
+        position: fixed;
+        cursor: pointer;
+        top: 0;
+        right: 24px;
+        color: #ffffff;
+        background-color: $theme-color;
+        z-index: 9999;
+        width: 40px;
+        text-align: center;
+        height: 42px;
+        line-height: 42px;
+        opacity: 0;
+        visibility: hidden;
+        @include transition(0.9s);
+        border-radius: 0px;
+        
+        & i{
+            position: absolute;
+            top: 50%;
+            left: -4px;
+            right: 0;
+            margin: 0 auto;
+            font-size: 15px;
+            @include transform(translateY(-50%));
+            @include transition(0.5s);
+            
+            &:last-child{
+                opacity: 0;
+                visibility: hidden;
+                top: 60%;
+            }
+        }
+        
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-color: $theme-color;
+            opacity: 0;
+            visibility: hidden;
+            @include transition(0.5s);
+            border-radius: 0px;
+        }
+        
+        &:focus,
+        &:hover{
+            color: $white;
+            
+            &::before{
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            & i{
+                &:first-child{
+                    opacity: 0;
+                    top: 0;
+                    visibility: hidden;
+                }
+                &:last-child{
+                    opacity: 1;
+                    visibility: visible;
+                    top: 50%;
+                }
+            }
+        }
+        
+        &.active{
+            top: 98%;
+            @include transform(translateY(-98%));
+            opacity: 1;
+            visibility: visible;
+            border-radius: 0px;
+            right: 20px;
+            @media #{$lg} {
+                top: 93%;
+            }
+            @media #{$md} {
+                top: 93%;
+            }
+        }
+    }
+}
+
+
+.go-top-wrap {
+    position: relative;
+    
+    & .go-top-btn {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: $white;
+        top: 3px;
+        z-index: 1;
+        background: $theme-color;
+        border-radius: 0px;
+        
+        & i{
+            font-size: 20px;
+            font-weight: 700;
+            padding-left: 4px;
+            color: $white;
+        }
+        
+        &::after{
+            z-index: -1;
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            @include animation(ripple 1.6s ease-out infinite);
+            opacity: 0;
+            background: $theme-color;
+            border-radius: 0px;
+        }
+        
+        &:hover{
+            background-color: $black;
+            color: $white;
+        }
+    }
+}
+
+@keyframes ripple {
+  0%, 35% {
+    @include transform(scale(0));
+    opacity: 1;
+  }
+  50% {
+    @include transform(scale(1.5));
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    @include transform(scale(2));
+  }
+}
+
+@-webkit-keyframes ripple {
+  0%, 35% {
+    @include transform(scale(0));
+    opacity: 1;
+  }
+  50% {
+    @include transform(scale(1.5));
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    @include transform(scale(2));
+  }
+}

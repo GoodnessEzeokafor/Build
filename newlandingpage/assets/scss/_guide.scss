@@ -1,0 +1,66 @@
+
+
+
+/*===========================
+    13.GUIDE css 
+===========================*/
+
+
+
+
+.guide-area{
+	padding-top: 112px;
+	padding-bottom: 120px;
+	overflow: hidden;
+	& .section-title{
+		padding-bottom: 0;
+		& span{
+			color: $black;
+			&::before{
+				background: $black;
+			}
+		}
+		& .input-box{
+			margin-left: 40px;
+			margin-right: 40px;
+			display: flex;
+			margin-top: 60px;
+			@media #{$lg} {
+				margin-left: 0;
+				margin-right: 0;
+			}
+			@media #{$md} {
+				margin-left: 0;
+				margin-right: 0;
+			}
+			@media #{$xs} {
+				margin-left: 0;
+				margin-right: 0;
+				display: block;
+			}
+			@media #{$sm} {
+				display: flex;
+			}
+			& input{
+				margin-right: 20px;
+				width: 100%;
+				border: 0;
+				line-height: 74px;
+				padding-left: 40px;
+				color: #838694;
+				&::placeholder{
+					opacity: 1;
+					color: #838694;
+				}
+			}
+			& button{
+				@media #{$xs} {
+					margin-top: 20px;
+				}
+				@media #{$sm} {
+					margin-top: 0px;
+				}
+			}
+		}
+	}
+}

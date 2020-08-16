@@ -1,0 +1,170 @@
+
+
+
+/*===========================
+    21.SUPERSTARS css 
+===========================*/
+
+
+
+
+.superstars-area{
+	margin-bottom: 100px;
+	padding-top: 60px;
+	position: relative;
+	& .superstars-find-it{
+		position: absolute;
+		top: -142px;
+		right: 0;
+		max-width: 660px;
+		padding: 72px 80px 80px;
+		background: $theme-color-2;
+		@media #{$laptop} {
+			max-width: 500px;
+			padding: 72px 30px 47px;
+		}
+		@media #{$lg} {
+			position: static;
+			max-width: 100%
+		}
+		@media #{$md} {
+			position: static;
+			max-width: 100%
+		}
+		@media #{$xs} {
+			position: static;
+			max-width: 100%;
+			padding: 40px 20px;
+		}
+		@media #{$sm} {
+			padding: 72px 80px 80px;
+		}
+		&::before{
+			position: absolute;
+			content: '';
+			left: 0;
+			top: 0;
+			height: 44px;
+			width: 44px;
+			background: $theme-color;
+		}
+		& .title{
+			font-size: 30px;
+			color: $white;
+		}
+		& p{
+			color: #d1c8fe;
+			font-size: 18px;
+			line-height: 36px;
+			padding-top: 21px;
+			padding-bottom: 32px;
+		}
+	}
+	& .superstars-content{
+		padding-left: 135px;
+		position: relative;
+		border-bottom: 1px solid #e9e9ee;
+		padding-bottom: 49px;
+		position: relative;
+		margin-right: -18px;
+		@media #{$lg} {
+			padding-left: 120px;
+		}
+		@media #{$xs} {
+			padding-left: 0px;
+			padding-right: 0;
+		}
+		& .icon{
+			position: absolute;
+			left: 0;
+			top: 15px;
+			height: 105px;
+			width: 105px;
+			line-height: 105px;
+			background: $theme-color-2;
+			color: $white;
+			border-radius: 50%;
+			font-size: 60px;
+			text-align: center;
+			@include transition(0.3s);
+			@media #{$xs} {
+				position: inherit;
+				margin-bottom: 30px;
+			}
+			&::before{
+				position: absolute;
+				content: '';
+				right: 5px;
+				top: 5px;
+				height: 20px;
+				width: 20px;
+				border-radius: 50%;
+				background: $theme-color;
+			}
+		}
+		& > .title{
+			font-size: 30px;
+			@media #{$xs} {
+				font-size: 24px;
+			}
+		}
+		& p{
+			font-size: 18px;
+			line-height: 38px;
+			color: $black-soft;
+			padding-top: 24px;
+		}
+		& .box{
+			width: 200px;
+			height: 180px;
+			background: #f7f7f9;
+			position: absolute;
+			right: -240px;
+			bottom: 0;
+			@media #{$laptop} {
+				display: none;
+			}
+			@media #{$md} {
+				right: -230px;
+			}
+			@media #{$xs} {
+				position: static;
+				transform: translateY(0);
+				margin-top: 30px;
+			}
+			@media #{$sm} {
+				position: static;
+				transform: translateY(0%);
+				margin-top: 30px;
+			}
+			&::before{
+				position: absolute;
+				content: '';
+				left: 0;
+				top: 0;
+				height: 23px;
+				width: 23px;
+				background: $theme-color-2;
+			}
+			& .title{
+				font-size: 50px;
+				color: $heading-color;
+				padding-top: 34px;
+				@media #{$lg} {
+					font-size: 50px;
+				}
+			}
+			& > span{
+				font-size: 18px;
+				line-height: 30px;
+				color: $black-soft;
+			}
+		}
+		&:hover{
+			& .icon{
+				background: $theme-color;
+				color: $heading-color;
+			}
+		}
+	}
+}

@@ -1,0 +1,174 @@
+
+
+
+/*===========================
+    19.NEXT BIG THING css 
+===========================*/
+
+
+
+
+.next-big-thing-area{
+	padding-top: 120px;
+	padding-bottom: 111px;
+	background-image: url(../images/next-big-thing-bg.png);
+	& .next-big-thing-content{
+		& > span{
+			font-size: 18px;
+			color: $theme-color-2;
+			padding-left: 15px;
+			position: relative;
+			&::before{
+				position: absolute;
+				content: '';
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				height: 6px;
+				width: 6px;
+				background: $theme-color;
+			}
+		}
+		& .title{
+			font-size: 60px;
+			padding-top: 5px;
+			padding-bottom: 60px;
+			@media #{$xs} {
+				font-size: 40px;
+			}
+		}
+		& .nav{
+			& li{
+				& a{
+					padding: 0;
+					line-height: 54px;
+					padding: 0 38px;
+					border-radius: 0;
+					background: $theme-color-2;
+					color: $heading-color;
+					font-weight: 500;
+					margin-right: 10px;
+					position: relative;
+					z-index: 5;
+					@include transition(0.3s);
+					@media #{$lg} {
+						padding: 0 28px;
+					}
+					@media #{$xs} {
+						margin-bottom: 10px;
+					}
+					@media #{$sm} {
+						margin-bottom: 0px;
+					}
+					&::before{
+						position: absolute;
+						content: '';
+						right: 0;
+						top: 0;
+						height: 100%;
+						width: 100%;
+						background: $theme-color;
+						z-index: -1;
+						@include transition(0.3s);
+					}
+					&.active{
+						color: $white;
+						&::before{
+							width: 11px;
+							height: 11px;
+						}
+					}
+				}
+			}
+		}
+		& .tab-content{
+			& .tab-pane{
+				& p{
+					font-size: 18px;
+					line-height: 36px;
+					color: #838694;
+					padding-right: 100px;
+					padding-top: 47px;
+					@media #{$lg} {
+						padding-right: 0;
+					}
+					@media #{$xs} {
+						padding-right: 0;
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+	& .next-big-thing-content-2{
+		margin-left: -30px;
+		@media #{$md} {
+			margin-left: 0;
+			margin-top: 40px;
+		}
+		@media #{$xs} {
+			margin-left: 0;
+			margin-top: 40px;
+		}
+		& p{
+			font-size: 18px;
+			line-height: 36px;
+			color: $black-soft;
+			padding-bottom: 72px;
+			@media #{$xs} {
+				font-size: 16px;
+			}
+		}
+		& .next-big-thing-list{
+			display: flex;
+			align-items: center;
+			@media #{$xs} {
+				display: block;
+			}
+			@media #{$sm} {
+				display: flex;
+			}
+			& .thumb{
+				min-width: 240px;
+				margin-right: 26px;
+				@media #{$lg} {
+					min-width: 200px;
+					margin-right: 10px;
+				}
+				@media #{$xs} {
+					min-width: 200px;
+					margin-right: 10px;
+				}
+				& img{
+					width: 100%;
+				}
+			}
+			& .list{
+				@media #{$lg} {
+					margin-right: -25px;
+				}
+				& ul {
+					& li{
+						font-size: 18px;
+						color: $black;
+						line-height: 40px;
+						@media #{$lg} {
+							font-size: 14px;
+						}
+						@media #{$xs} {
+							font-size: 14px;
+						}
+						& i{
+							color: $theme-color-2;
+							padding-right: 8px;
+						}
+					}
+				}
+			}
+		}
+	}
+	&.next-big-thing-about-area{
+		background-image: none;
+		background: #f7f7f9;
+	}
+}

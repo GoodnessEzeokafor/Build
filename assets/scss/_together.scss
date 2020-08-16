@@ -1,0 +1,57 @@
+
+
+
+/*===========================
+    8.TOGETHER css 
+===========================*/
+
+
+.together-area{
+	padding-bottom: 223px;
+	position: relative;
+	background-attachment: fixed;
+	&::before{
+		position: absolute;
+		content: '';
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background-color: rgba(27, 31, 46,.7);
+	}
+	& .together-content{
+		padding-top: 112px;
+		& span{
+			font-size: 20px;
+			font-weight: 500;
+			color: $theme-color;
+		}
+		& .title{
+			font-size: 60px;
+			color: $white;
+			padding-top: 6px;
+			padding-bottom: 62px;
+			@media #{$lg} {
+				font-size: 50px;
+			}
+			@media #{$md} {
+				font-size: 40px;
+			}
+			@media #{$xs} {
+				font-size: 36px;
+			}
+
+		}
+	}
+	&.together-2-area{
+		height: 550px;
+	}
+	&.together-3-area{
+		padding-bottom: 120px;
+	}
+}
+
+
+
+
+

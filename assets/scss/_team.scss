@@ -1,0 +1,118 @@
+
+
+
+/*===========================
+    11.TEAM css 
+===========================*/
+
+
+
+
+.team-area{
+	padding-top: 112px;
+	padding-bottom: 258px;
+	position: relative;
+	background-attachment: fixed;
+	&::before{
+		position: absolute;
+		content: '';
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background-color: rgba(27, 31, 46,.7);
+
+	}
+	& .section-title{
+		padding-bottom: 4px;
+	}
+}
+
+
+
+
+.team-main-area{
+	margin-top: -230px;
+	& .team-item{
+		& .team-thumb{
+			position: relative;
+			& .share{
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				height: 56px;
+				width: 56px;
+				text-align: center;
+				line-height: 56px;
+				color: $white;
+				background: $theme-color-2;
+				z-index: 5;
+				border-top: 1px solid #765ff2;
+				& ul{
+					position: absolute;
+					left: 0;
+					bottom: 40px;
+					@include transition(0.3s);
+					opacity: 0;
+					z-index: -1;
+					& li{
+						& a{
+							height: 56px;
+							width: 56px;
+							text-align: center;
+							line-height: 56px;
+							color: $white;
+							background: $theme-color-2;
+							@include transition(0.3s);
+							&:hover{
+								background: #3c1ddd;
+							}
+						}
+					}
+				}
+			}
+			& img{
+				width: 100%;
+				@include transition(0.3s);
+			}
+		}
+		& .team-content{
+			border-bottom: 1px solid #e9e9ee;
+			padding-top: 25px;
+			padding-bottom: 23px;
+			& .title{
+				font-weight: 400;
+				font-size: 20px;
+			}
+			& span{
+				color: $black-soft;
+			}
+		}
+		&:hover{
+			& .team-thumb{
+				& .share{
+					& ul{
+						opacity: 1;
+						bottom: 56px;
+					}
+				}
+				& img{
+					filter: grayscale(100%);
+				}
+			}
+
+		}
+	}
+	&.about-team-main-area{
+		margin-top: 112px;
+		padding-bottom: 120px;
+	}
+	&.team-page-area{
+		padding-top: 90px;
+		margin-top: 0;
+	}
+}
+
+
+
+
